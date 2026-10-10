@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Public Sans", sans-serif;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 51%;
+    background-color: hsl(240, 20%, 94%);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bank-name {
+    text-align: center;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.inputs button {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color:  hsl(233, 26%, 24%);
+    border: none;
+}
+.consent {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+}
+
+.consent input {
+    width: 10%;
+    height: 20px;
+}
+
+
+.signup-image img {
+    border-radius: 10px;
+    width: 95%;
+    height: 85vh;
+}
+
+.alt-action {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin-top: 15px;
+}
+
+.alt-action2 {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin-top: 15px;
+}
+
+.alt-action2 a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* ===== TABLET VIEW (max-width: 1024px) ===== */
+@media (max-width: 1024px) {
+    body {
+        min-height: 100vh;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        background-color: #eef1f7;
+    }
+
+    form {
+        width: 380px;
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 30px 25px;
+        margin: auto;
+        background-color: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .signup-image {
+        display: none;
+    }
+
+    .details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputs {
+        width: 100%;
+        align-items: center;
+    }
+
+    .inputs input,
+    .inputs button {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ===== PHONE VIEW (max-width: 768px) ===== */
+@media (max-width: 768px) {
+    body {
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px 16px;
+        box-sizing: border-box;
+        background-color: #eef1f7;
+    }
+
+    form {
+        width: 360px;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 28px 22px;
+        background-color: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .signup-image {
+        display: none;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .bank-name h1 {
+        font-size: 1.5rem;
+        margin: 8px 0 4px;
+    }
+
+    .bank-name p {
+        margin: 0 0 20px;
+        font-size: 0.9rem;
+        color: #6b7280;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .inputs label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 5px;
+        align-self: flex-start;
+    }
+
+    .inputs input {
+        width: 100%;
+        height: 42px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+        background-color: #f3f4f6;
+        border-radius: 10px;
+        margin-bottom: 14px;
+    }
+
+    .inputs button {
+        width: 100%;
+        height: 46px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+
+    .consent {
+        width: 100%;
+        align-items: center;
+        margin: 4px 0 12px;
+    }
+
+    .consent input {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+
+    .consent p {
+        font-size: 0.82rem;
+        margin: 0;
+        color: #4b5563;
+    }
+}
+
+/* ===== SMALL PHONE VIEW (max-width: 400px) ===== */
+@media (max-width: 400px) {
+    body {
+        padding: 12px 10px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 350px;
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .bank-name h1 {
+        font-size: 1.35rem;
+    }
+
+    .inputs input,
+    .inputs button {
+        font-size: 0.88rem;
+    }
+
+    .consent p {
+        font-size: 0.78rem;
+    }
+}

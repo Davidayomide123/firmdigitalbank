@@ -3,11 +3,13 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: white;
+    background-color: #eef1f7;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Public Sans", sans-serif;
+    color: #111827;
+    min-height: 100vh;
 }
 
 form {
@@ -16,15 +18,35 @@ form {
     align-items: center;
     height: 90vh;
     width: 51%;
-    background-color: hsl(240, 20%, 94%);
+    background-color: #ffffff;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 18px;
     padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+    overflow: hidden;
 }
 
 .bank-name {
     text-align: center;
+}
+
+.bank-name img {
+    height: 34px;
+    margin-bottom: 12px;
+}
+
+.bank-name h1 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #111827;
+    margin: 6px 0 6px;
+}
+
+.bank-name p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 24px;
 }
 
 .inputs {
@@ -32,34 +54,80 @@ form {
     flex-direction: column;
 }
 
+.inputs label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
 .inputs input {
     width: 300px;
-    height: 30px;
-    margin-bottom: 10px;
+    height: 42px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    margin-bottom: 14px;
     border-radius: 10px;
-    border: none;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #111827;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.inputs input::placeholder {
+    color: #9ca3af;
+}
+
+.inputs input:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
 }
 
 .inputs button {
     width: 300px;
-    height: 40px;
+    height: 46px;
     border-radius: 10px;
     color: white;
-    background-color: hsl(233, 26%, 24%);
+    background-color: #2563eb;
     border: none;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 6px;
+    transition: background 0.15s;
+}
+
+.inputs button:hover {
+    background-color: #1d4ed8;
+}
+
+.inputs button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    line-height: 46px;
 }
 
 .consent {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 0;
+    gap: 8px;
+    margin: 4px 0 14px;
 }
 
 .consent input {
-    width: 10%;
-    height: 20px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #2563eb;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
 .consent p {
@@ -68,26 +136,47 @@ form {
     margin: 0;
 }
 
+.consent p strong {
+    color: #2563eb;
+    cursor: pointer;
+}
+
 .alt-action {
     text-align: center;
     font-size: 0.85rem;
     color: #4b5563;
-    margin-top: 15px;
+    margin-top: 18px;
+}
+
+.alt-action strong a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.alt-action strong a:hover {
+    text-decoration: underline;
 }
 
 .alt-action2 {
     text-align: center;
     font-size: 0.85rem;
     color: #4b5563;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .alt-action2 a {
     text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.alt-action2 a:hover {
+    color: #2563eb;
 }
 
 .signup-image img {
-    border-radius: 10px;
+    border-radius: 12px;
     width: 95%;
     height: 85vh;
     object-fit: cover;

@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0a1424;
-  color: #e6ecf5;
+  background: #f5f6fa;
+  color: #111827;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -19,28 +19,29 @@ body {
 /* ================= SIDEBAR ================= */
 .sidebar {
   width: 240px;
-  background: #0d1b30;
+  background: #ffffff;
   padding: 26px 16px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  border-right: 1px solid #1b2a44;
+  border-right: 1px solid #e5e7eb;
 }
 
 .sidebar .logo {
-  color: #fff;
+  color: #111827;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   padding-left: 10px;
   margin-bottom: 34px;
+  letter-spacing: -0.3px;
 }
 
 .sidebar nav a {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #8a9bb8;
+  color: #6b7280;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -52,16 +53,16 @@ body {
 .sidebar nav a img {
   width: 20px;
   height: 20px;
-  filter: invert(65%) sepia(14%) saturate(400%) hue-rotate(180deg);
+  filter: brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(500%) hue-rotate(180deg);
 }
 
 .sidebar nav a:hover {
-  background: #17253e;
-  color: #fff;
+  background: #f3f4f6;
+  color: #111827;
 }
 
 .sidebar nav a.active {
-  background: #4f7cff;
+  background: #2563eb;
   color: #fff;
 }
 
@@ -103,7 +104,7 @@ body {
 
 .level {
   font-size: 14px;
-  color: #8a9bb8;
+  color: #6b7280;
   font-weight: 500;
 }
 
@@ -116,7 +117,7 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #13223c;
+  background: #f3f4f6;
   border: none;
   cursor: pointer;
   display: grid;
@@ -126,23 +127,36 @@ body {
 .icon-btn img {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) saturate(100%) invert(15%) sepia(10%) saturate(500%) hue-rotate(180deg);
 }
 
 .icon-btn:hover {
-  background: #1b2f52;
+  background: #e5e7eb;
 }
 
 /* Balance Card */
 .balance-card {
-  background: #0f1e36;
-  border-radius: 18px;
-  padding: 24px;
+  background: linear-gradient(140deg, #111827 0%, #1f2937 100%);
+  border-radius: 22px;
+  padding: 28px;
   margin-bottom: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.balance-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.35), transparent 55%);
+  pointer-events: none;
 }
 
 .desktop-balance {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .account-row {
@@ -150,14 +164,14 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #c5d3e8;
+  color: rgba(255,255,255,0.75);
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .copy-icon {
   font-size: 15px;
-  color: #8a9bb8;
+  color: rgba(255,255,255,0.6);
   cursor: pointer;
 }
 
@@ -169,20 +183,15 @@ body {
 }
 
 .amount-row h1 {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 800;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.8px;
   color: #fff;
 }
 
 .eye-icon {
   font-size: 18px;
-  color: #8a9bb8;
-}
-
-.updated {
-  font-size: 13px;
-  color: #8a9bb8;
+  color: rgba(255,255,255,0.6);
 }
 
 .card-top,
@@ -202,12 +211,12 @@ body {
 .section-head h3 {
   font-size: 15px;
   font-weight: 600;
-  color: #dbe4f0;
+  color: #111827;
 }
 
 .section-head a {
   font-size: 13px;
-  color: #f5c542;
+  color: #2563eb;
   text-decoration: none;
   font-weight: 600;
 }
@@ -228,7 +237,8 @@ body {
 }
 
 .service-item {
-  background: #13223c;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 14px;
   padding: 18px 8px;
   display: flex;
@@ -241,19 +251,19 @@ body {
 }
 
 .service-item:hover {
-  background: #1b2f52;
+  background: #f9fafb;
 }
 
 .service-item img {
   width: 22px;
   height: 22px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) saturate(100%) invert(15%) sepia(10%) saturate(500%) hue-rotate(180deg);
   opacity: 0.9;
 }
 
 .service-item span {
   font-size: 13px;
-  color: #c5d3e8;
+  color: #4b5563;
   font-weight: 500;
 }
 
@@ -261,63 +271,10 @@ body {
   display: none;
 }
 
-/* Rewards */
-.rewards {
-  margin-bottom: 28px;
-}
-
-.rewards h3 {
-  font-size: 15px;
-  font-weight: 600;
-  color: #dbe4f0;
-  margin-bottom: 16px;
-}
-
-.reward-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.reward-card {
-  background: #13223c;
-  border-radius: 14px;
-  padding: 16px;
-}
-
-.reward-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 16px;
-}
-
-.reward-icon img {
-  width: 22px;
-  height: 22px;
-  filter: brightness(0) invert(1);
-}
-
-.reward-icon.yellow { background: #3a2f10; }
-.reward-icon.purple { background: #2b1a44; }
-
-.reward-card p {
-  font-size: 13px;
-  color: #8a9bb8;
-  margin-bottom: 4px;
-}
-
-.reward-card h4 {
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-}
-
 /* Transactions */
 .txn-list {
-  background: #0f1e36;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 14px;
   padding: 4px 16px;
 }
@@ -327,7 +284,7 @@ body {
   align-items: center;
   gap: 14px;
   padding: 16px 0;
-  border-bottom: 1px solid #1b2a44;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .txn-item:last-child { border-bottom: none; }
@@ -353,13 +310,7 @@ body {
 .txn-name {
   font-size: 14.5px;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 2px;
-}
-
-.txn-time {
-  font-size: 12.5px;
-  color: #8a9bb8;
+  color: #111827;
 }
 
 .txn-right { text-align: right; }
@@ -367,12 +318,7 @@ body {
 .txn-amount {
   font-size: 14.5px;
   font-weight: 700;
-  color: #fff;
-}
-
-.txn-date {
-  font-size: 12px;
-  color: #8a9bb8;
+  color: #111827;
 }
 
 .bottom-nav {
@@ -403,16 +349,15 @@ body {
     padding: 22px 20px;
   }
 
-  .amount-row h1 { font-size: 28px; }
+  .amount-row h1 { font-size: 32px; }
 
   .service-grid { gap: 10px; }
   .service-item { padding: 14px 6px; }
   .service-item span { font-size: 12px; }
-  .reward-card h4 { font-size: 16px; }
 }
 
 /* ============================================
-   PHONES (600px and below) — NEW COLOR SCHEME
+   PHONES (600px and below)
    ============================================ */
 @media (max-width: 600px) {
 
@@ -431,7 +376,6 @@ body {
     min-height: 100vh;
   }
 
-  /* Phone topbar */
   .topbar-phone {
     display: flex;
     justify-content: space-between;
@@ -443,13 +387,6 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-
-  .brand-dot {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #2563eb;
   }
 
   .brand-name {
@@ -478,7 +415,6 @@ body {
 
   .topbar { display: none; }
 
-  /* Balance Card — new color */
   .balance-card {
     background: linear-gradient(140deg, #111827 0%, #1f2937 100%);
     border-radius: 22px;
@@ -529,13 +465,6 @@ body {
     margin-bottom: 22px;
   }
 
-  .dots {
-    font-size: 16px;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 8px;
-  }
-
   .balance-label {
     font-size: 12.5px;
     color: rgba(255,255,255,0.75);
@@ -579,7 +508,6 @@ body {
 
   .title-desktop { display: none; }
   .title-phone   { display: block; }
-  .edit-desktop  { display: none; }
 
   .service-grid { display: none; }
 
@@ -620,10 +548,9 @@ body {
     font-weight: 500;
   }
 
-  .rewards { display: none; }
-
   .txn-list {
     background: transparent;
+    border: none;
     padding: 0;
   }
 
@@ -636,11 +563,8 @@ body {
   .txn-item:last-child { border-bottom: none; }
 
   .txn-name  { color: #111827; font-size: 14px; }
-  .txn-time  { color: #9ca3af; font-size: 12px; }
   .txn-amount{ color: #111827; font-size: 14px; font-weight: 700; }
-  .txn-date  { color: #9ca3af; font-size: 11.5px; margin-top: 2px; }
 
-  /* Floating bottom nav — new color */
   .bottom-nav {
     display: flex;
     justify-content: space-around;

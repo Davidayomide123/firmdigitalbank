@@ -46,12 +46,14 @@ form {
     color: white;
     background-color:  hsl(233, 26%, 24%);
     border: none;
+    cursor: pointer;
 }
 .consent {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 0;
+    cursor: pointer;
 }
 
 .consent input {

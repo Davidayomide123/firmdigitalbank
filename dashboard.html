@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaBank Dashboard</title>
+<link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <h2 class="logo">NovaBank</h2>
+    <nav>
+      <a href="#" class="active">
+        <img src="/images/house-chimney.svg" alt="Home">
+        Home
+      </a>
+      <a href="#">
+        <img src="/images/credit-card.svg" alt="Card">
+        Card
+      </a>
+      <a href="#">
+        <img src="/images/services.svg" alt="Services">
+        Services
+      </a>
+      <a href="#">
+        <img src="/images/growth-chart-invest.svg" alt="Rewards">
+        Rewards
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main">
+
+    <!-- Top Header (phone) -->
+    <header class="topbar-phone">
+      <div class="brand">
+        <span class="brand-name"><img src="/images/logo-dark.svg" alt=""></span>
+      </div>
+      <button class="bell-btn">
+        <img src="/images/bell.svg" alt="Notifications">
+      </button>
+    </header>
+
+    <!-- Topbar (desktop/tablet) -->
+    <header class="topbar">
+      <div class="profile">
+        <img src="/images/avatar.png" alt="avatar" class="avatar">
+        <span class="level">Level 1</span>
+      </div>
+      <div class="top-icons">
+        <button class="icon-btn">
+          <img src="/images/bell.svg" alt="Notifications">
+        </button>
+      </div>
+    </header>
+
+    <!-- Balance Card -->
+    <section class="balance-card">
+
+      <!-- Phone: card layout -->
+      <div class="card-top">
+        <div class="card-holder">
+          <p class="holder-name">Elanor Quen</p>
+          <p class="holder-num">0144-510-2008</p>
+        </div>
+      </div>
+
+      <div class="card-middle">
+        <div class="dots">•••</div>
+        <p class="balance-label">Total Balance</p>
+        <h1>₦12,840.50</h1>
+      </div>
+
+      <div class="card-actions">
+        <button class="btn-qr">Withdraw</button>
+        <button class="btn-transfer">Transfer</button>
+      </div>
+
+      <!-- Desktop text version -->
+      <div class="desktop-balance">
+        <div class="account-row">
+          <span>8069675028 | David Pere Onifade</span>
+          <span class="copy-icon">⧉</span>
+        </div>
+        <div class="amount-row">
+          <h1>₦450.06</h1>
+          <span class="eye-icon">👁</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Services / Quick Action -->
+    <section class="services">
+      <div class="section-head">
+        <h3 class="title-desktop">Services</h3>
+        <h3 class="title-phone">Quick Action</h3>
+        <a href="#" class="edit-desktop">Edit</a>
+      </div>
+
+      <!-- Phone: round icons -->
+      <div class="quick-grid">
+        <div class="quick-item">
+          <div class="quick-circle">
+            <img src="/images/deposit.svg" alt="Top Up">
+          </div>
+          <span>Top Up</span>
+        </div>
+        <div class="quick-item">
+          <div class="quick-circle">
+            <img src="/images/credit-card.svg" alt="E-Wallet">
+          </div>
+          <span>E-Wallet</span>
+        </div>
+      </div>
+
+      <!-- Desktop grid -->
+      <div class="service-grid">
+        <div class="service-item">
+          <img src="/images/hand-paper.svg" alt="Transfer">
+          <span>Transfer</span>
+        </div>
+        <div class="service-item">
+          <img src="/images/loans.png" alt="Loans">
+          <span>Loans</span>
+        </div>
+        <div class="service-item">
+          <img src="/images/investments.png" alt="Investments">
+          <span>Investments</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Transactions -->
+    <section class="transactions">
+      <div class="section-head">
+        <h3>Recent Transactions</h3>
+        <a href="#">View All ›</a>
+      </div>
+      <div class="txn-list">
+        <div class="txn-item">
+          <div class="txn-logo spotify">S</div>
+          <div class="txn-info">
+            <p class="txn-name">Spotify</p>
+            <p class="txn-time">Subscriptions</p>
+          </div>
+          <div class="txn-right">
+            <p class="txn-amount">-$9.99</p>
+            <p class="txn-date">Today, 09.21 AM</p>
+          </div>
+        </div>
+
+        <div class="txn-item">
+          <div class="txn-logo netflix">N</div>
+          <div class="txn-info">
+            <p class="txn-name">Netflix</p>
+            <p class="txn-time">Entertainment</p>
+          </div>
+          <div class="txn-right">
+            <p class="txn-amount">-$15.40</p>
+            <p class="txn-date">Yesterday, 06.12 PM</p>
+          </div>
+        </div>
+
+        <div class="txn-item">
+          <div class="txn-logo starbucks">★</div>
+          <div class="txn-info">
+            <p class="txn-name">Starbucks Coffee</p>
+            <p class="txn-time">Food & Drink</p>
+          </div>
+          <div class="txn-right">
+            <p class="txn-amount">-$4.75</p>
+            <p class="txn-date">Today, 08.45 AM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= BOTTOM NAV (PHONE ONLY) ================= -->
+  <nav class="bottom-nav">
+    <a href="#" class="active">
+      <img src="/images/house-chimney.svg" alt="Home">
+      <span>Home</span>
+    </a>
+    <a href="#">
+      <img src="/images/credit-card.svg" alt="Cards">
+      <span>Cards</span>
+    </a>
+    <a href="#">
+      <img src="/images/user-skill-gear.svg" alt="Profile">
+      <span>Profile</span>
+    </a>
+  </nav>
+
+</div>
+
+</body>
+</html>

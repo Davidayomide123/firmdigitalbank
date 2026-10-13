@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   background: #f5f6fa;
   color: #111827;
   -webkit-font-smoothing: antialiased;
@@ -82,15 +80,22 @@ body {
   max-width: 1200px;
 }
 
-.topbar-phone {
-  display: none;
-}
-
+/* Topbar */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  height: 28px;
 }
 
 .profile {
@@ -110,11 +115,6 @@ body {
   font-size: 14px;
   color: #6b7280;
   font-weight: 500;
-}
-
-.top-icons {
-  display: flex;
-  gap: 10px;
 }
 
 .icon-btn {
@@ -138,7 +138,7 @@ body {
   background: #e5e7eb;
 }
 
-/* Balance Card */
+/* ================= BALANCE CARD ================= */
 .balance-card {
   background: linear-gradient(140deg, #111827 0%, #1f2937 100%);
   border-radius: 22px;
@@ -147,6 +147,9 @@ body {
   color: #fff;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .balance-card::after {
@@ -157,54 +160,70 @@ body {
   pointer-events: none;
 }
 
-.desktop-balance {
-  display: block;
+.card-holder,
+.card-balance,
+.card-actions {
   position: relative;
   z-index: 1;
 }
 
-.account-row {
+.card-holder {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+}
+
+.holder-name {
   font-size: 14px;
-  color: rgba(255,255,255,0.75);
-  font-weight: 500;
-  margin-bottom: 16px;
+  font-weight: 600;
 }
 
-.copy-icon {
-  font-size: 15px;
-  color: rgba(255,255,255,0.6);
-  cursor: pointer;
+.holder-num {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.5px;
 }
 
-.amount-row {
+.card-balance {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 6px;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.amount-row h1 {
-  font-size: 38px;
+.balance-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card-balance h1 {
+  font-size: 36px;
   font-weight: 800;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.5px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 13px;
+  border-radius: 12px;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.14);
   color: #fff;
 }
 
-.eye-icon {
-  font-size: 18px;
-  color: rgba(255,255,255,0.6);
+.card-actions button:hover {
+  background: rgba(255, 255, 255, 0.24);
 }
 
-.card-top,
-.card-middle,
-.card-actions {
-  display: none;
-}
-
-/* Section head */
+/* ================= SECTION HEAD ================= */
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -225,11 +244,7 @@ body {
   font-weight: 600;
 }
 
-.title-phone {
-  display: none;
-}
-
-/* Services */
+/* ================= SERVICES ================= */
 .services {
   margin-bottom: 28px;
 }
@@ -241,28 +256,28 @@ body {
 }
 
 .service-item {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 18px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   text-align: center;
   cursor: pointer;
 }
 
-.service-item:hover {
-  background: #f9fafb;
+.service-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #2563eb;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
 }
 
-.service-item img {
+.service-circle img {
   width: 22px;
   height: 22px;
-  filter: brightness(0) saturate(100%) invert(15%) sepia(10%) saturate(500%) hue-rotate(180deg);
-  opacity: 0.9;
+  filter: brightness(0) invert(1);
 }
 
 .service-item span {
@@ -271,11 +286,7 @@ body {
   font-weight: 500;
 }
 
-.quick-grid {
-  display: none;
-}
-
-/* Transactions */
+/* ================= TRANSACTIONS ================= */
 .txn-list {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -291,7 +302,9 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.txn-item:last-child { border-bottom: none; }
+.txn-item:last-child {
+  border-bottom: none;
+}
 
 .txn-logo {
   width: 40px;
@@ -325,6 +338,7 @@ body {
   color: #111827;
 }
 
+/* Bottom nav hidden on laptop */
 .bottom-nav {
   display: none;
 }
@@ -353,10 +367,9 @@ body {
     padding: 22px 20px;
   }
 
-  .amount-row h1 { font-size: 32px; }
+  .card-balance h1 { font-size: 32px; }
 
   .service-grid { gap: 10px; }
-  .service-item { padding: 14px 6px; }
   .service-item span { font-size: 12px; }
 }
 
@@ -364,10 +377,8 @@ body {
    PHONES (600px and below)
    ============================================ */
 @media (max-width: 600px) {
-
   body {
     background: #ffffff;
-    color: #111827;
   }
 
   .sidebar { display: none; }
@@ -380,178 +391,68 @@ body {
     min-height: 100vh;
   }
 
-  .topbar-phone {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  /* Topbar — stack brand above profile */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
     margin-bottom: 22px;
   }
 
   .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
   }
 
-  .brand-name {
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #111827;
+  .brand-logo {
+    height: 24px;
   }
 
-  .bell-btn {
+  .icon-btn {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background: #f3f4f6;
-    border: none;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
   }
 
-  .bell-btn img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) saturate(100%) invert(15%) sepia(10%) saturate(500%) hue-rotate(180deg);
-  }
-
-  .topbar { display: none; }
-
+  /* Balance card reshapes */
   .balance-card {
-    background: linear-gradient(140deg, #111827 0%, #1f2937 100%);
-    border-radius: 22px;
     padding: 22px;
-    margin-bottom: 28px;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
+    gap: 26px;
   }
 
-  .balance-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.35), transparent 55%);
-    pointer-events: none;
-  }
-
-  .desktop-balance { display: none; }
-
-  .card-top {
-    display: flex;
-    justify-content: space-between;
+  .card-holder {
+    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 1;
+    gap: 2px;
   }
 
-  .holder-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 2px;
-  }
+  .holder-name { font-size: 13px; }
+  .holder-num  { font-size: 11px; }
 
-  .holder-num {
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
-    letter-spacing: 0.5px;
-  }
-
-  .card-middle {
-    display: block;
+  .card-balance {
+    align-items: center;
     text-align: center;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 22px;
   }
 
-  .balance-label {
-    font-size: 12.5px;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 6px;
-  }
+  .balance-label { font-size: 12.5px; }
 
-  .card-middle h1 {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-
-  .card-actions {
-    display: flex;
-    gap: 10px;
-    position: relative;
-    z-index: 1;
-  }
+  .card-balance h1 { font-size: 30px; }
 
   .card-actions button {
-    flex: 1;
-    padding: 12px;
-    border-radius: 12px;
-    border: none;
-    font-family: inherit;
+    padding: 13px;
     font-size: 13.5px;
-    font-weight: 600;
-    cursor: pointer;
-    background: rgba(255,255,255,0.12);
-    color: #fff;
   }
 
-  .card-actions button:hover {
-    background: rgba(255,255,255,0.2);
+  /* Services stay as circles, just tighter */
+  .service-circle {
+    width: 50px;
+    height: 50px;
   }
 
-  .section-head h3 { color: #111827; font-size: 14px; }
-  .section-head a  { color: #2563eb; font-size: 12.5px; }
-
-  .title-desktop { display: none; }
-  .title-phone   { display: block; }
-
-  .service-grid { display: none; }
-
-  .quick-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 8px;
+  .service-item span {
+    font-size: 11.5px;
   }
 
-  .quick-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-  }
-
-  .quick-circle {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: #2563eb;
-    display: grid;
-    place-items: center;
-    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
-  }
-
-  .quick-circle img {
-    width: 22px;
-    height: 22px;
-    filter: brightness(0) invert(1);
-  }
-
-  .quick-item span {
-    font-size: 11.6px;
-    color: #4b5563;
-    font-weight: 500;
-  }
-
+  /* Transactions — remove card background */
   .txn-list {
     background: transparent;
     border: none;
@@ -559,16 +460,16 @@ body {
   }
 
   .txn-item {
-    background: transparent;
-    border-bottom: 1px solid #e5e7eb;
     padding: 14px 0;
+    border-bottom: 1px solid #e5e7eb;
   }
 
   .txn-item:last-child { border-bottom: none; }
 
-  .txn-name  { color: #111827; font-size: 14px; }
-  .txn-amount{ color: #111827; font-size: 14px; font-weight: 700; }
+  .txn-name  { font-size: 14px; }
+  .txn-amount{ font-size: 14px; }
 
+  /* Bottom nav appears */
   .bottom-nav {
     display: flex;
     justify-content: space-around;
@@ -623,12 +524,12 @@ body {
 @media (max-width: 400px) {
   .main { padding: 16px 14px 120px; }
 
-  .card-middle h1 { font-size: 26px; }
+  .card-balance h1 { font-size: 26px; }
 
-  .quick-circle { width: 46px; height: 46px; }
-  .quick-circle img { width: 20px; height: 20px; }
+  .service-circle { width: 46px; height: 46px; }
+  .service-circle img { width: 20px; height: 20px; }
 
-  .quick-item span { font-size: 10.5px; }
+  .service-item span { font-size: 10.5px; }
 
   .txn-name,
   .txn-amount { font-size: 13.5px; }

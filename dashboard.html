@@ -11,7 +11,7 @@
 <div class="app">
 
   <aside class="sidebar">
-    <h2 class="logo">NovaBank</h2>
+    <h2 class="logo">FirmBank</h2>
     <nav>
       <a href="#" class="active">
         <img src="/images/house-chimney.svg" alt="Home">
@@ -32,43 +32,30 @@
     </nav>
   </aside>
 
-  
   <main class="main">
 
-    <!-- Top Header (phone) -->
-    <header class="topbar-phone">
+    <!-- Topbar (one version for both views) -->
+    <header class="topbar">
       <div class="brand">
-        <span class="brand-name"><img src="/images/logo-dark.svg" alt=""></span>
+        <img src="/images/logo-dark.svg" alt="" class="brand-logo">
+        <div class="profile">
+          <img src="/images/avatar.png" alt="avatar" class="avatar">
+          <span class="level">Level 1</span>
+        </div>
       </div>
-      <button class="bell-btn">
+      <button class="icon-btn">
         <img src="/images/bell.svg" alt="Notifications">
       </button>
     </header>
 
-
-    <header class="topbar">
-      <div class="profile">
-        <img src="/images/avatar.png" alt="avatar" class="avatar">
-        <span class="level">Level 1</span>
-      </div>
-      <div class="top-icons">
-        <button class="icon-btn">
-          <img src="/images/bell.svg" alt="Notifications">
-        </button>
-      </div>
-    </header>
-
+    <!-- Balance Card (one card, reshapes with media query) -->
     <section class="balance-card">
-
-      <!-- Phone card layout -->
-      <div class="card-top">
-        <div class="card-holder">
-          <p class="holder-name">Elanor Quen</p>
-          <p class="holder-num">0144-510-2008</p>
-        </div>
+      <div class="card-holder">
+        <p class="holder-name">Elanor Quen</p>
+        <p class="holder-num">0144-510-2008</p>
       </div>
 
-      <div class="card-middle">
+      <div class="card-balance">
         <p class="balance-label">Total Balance</p>
         <h1>$12,840.50</h1>
       </div>
@@ -77,68 +64,50 @@
         <button class="btn-qr">Withdraw</button>
         <button class="btn-transfer">Transfer</button>
       </div>
-
-      <!-- Desktop text version -->
-      <div class="desktop-balance">
-        <div class="account-row">
-          <span>8069675028 | David Pere Onifade</span>
-          <span class="copy-icon">⧉</span>
-        </div>
-        <div class="amount-row">
-          <h1>$450.06</h1>
-          <span class="eye-icon">👁</span>
-        </div>
-      </div>
-
     </section>
 
-    <!-- Services / Quick Action -->
+    <!-- Services / Quick Action (one section) -->
     <section class="services">
       <div class="section-head">
-        <h3 class="title-desktop">Services</h3>
-        <h3 class="title-phone">Quick Action</h3>
-        <a href="#" class="edit-desktop">Edit</a>
+        <h3>Quick Action</h3>
+        <a href="#">Edit</a>
       </div>
 
-      <!-- Phone: round icons -->
-      <div class="quick-grid">
-        <div class="quick-item">
-          <div class="quick-circle">
+      <div class="service-grid">
+        <div class="service-item">
+          <div class="service-circle">
             <img src="/images/deposit.svg" alt="Top Up">
           </div>
           <span>Top Up</span>
         </div>
-        <div class="quick-item">
-          <div class="quick-circle">
+        <div class="service-item">
+          <div class="service-circle">
             <img src="/images/credit-card.svg" alt="E-Wallet">
           </div>
           <span>E-Wallet</span>
         </div>
-      </div>
-
-      <!-- Desktop grid -->
-      <div class="service-grid">
         <div class="service-item">
-          <img src="/images/money-transfer-smartphone.svg" alt="Transfer">
+          <div class="service-circle">
+            <img src="/images/money-transfer-smartphone.svg" alt="Transfer">
+          </div>
           <span>Transfer</span>
         </div>
         <div class="service-item">
-          <img src="/images/calendar-payment-loan.svg" alt="Loans">
+          <div class="service-circle">
+            <img src="/images/calendar-payment-loan.svg" alt="Loans">
+          </div>
           <span>Loans</span>
-        </div>
-        <div class="service-item">
-          <img src="/images/growth-chart-invest.svg" alt="Investments">
-          <span>Investments</span>
         </div>
       </div>
     </section>
-
 
     <!-- Transactions -->
     <section class="transactions">
       <div class="section-head">
         <h3>Recent Transactions</h3>
+        <a href="#">View All</a>
       </div>
+
       <div class="txn-list">
         <div class="txn-item">
           <div class="txn-logo spotify">S</div>
@@ -174,6 +143,7 @@
 
   </main>
 
+  <!-- Bottom nav (phone only) -->
   <nav class="bottom-nav">
     <a href="#" class="active">
       <img src="/images/house-chimney.svg" alt="Home">

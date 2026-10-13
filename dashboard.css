@@ -262,6 +262,8 @@ body {
   gap: 10px;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .service-circle {
@@ -272,6 +274,11 @@ body {
   display: grid;
   place-items: center;
   box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+  transition: transform 0.15s;
+}
+
+.service-item:hover .service-circle {
+  transform: translateY(-2px);
 }
 
 .service-circle img {

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ================= COMING SOON ================= */
+.coming-soon {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 60px 50px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.cs-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+}
+
+.cs-icon img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(2500%) hue-rotate(215deg);
+}
+
+.coming-soon h1 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.coming-soon p {
+  font-size: 14.5px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.cs-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.cs-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ============================================
+   PHONES (600px and below)
+   ============================================ */
+@media (max-width: 600px) {
+  body {
+    background: #ffffff;
+  }
+
+  .page {
+    padding: 30px 20px;
+  }
+
+  .coming-soon {
+    border: none;
+    padding: 30px 20px;
+  }
+
+  .cs-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .cs-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .coming-soon h1 {
+    font-size: 20px;
+  }
+
+  .coming-soon p {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .cs-btn {
+    padding: 12px 24px;
+    font-size: 13.5px;
+  }
+}
+
+/* ============================================
+   SMALL PHONES (400px and below)
+   ============================================ */
+@media (max-width: 400px) {
+  .coming-soon h1 { font-size: 18px; }
+  .coming-soon p  { font-size: 13px; }
+
+  .cs-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cs-icon img {
+    width: 28px;
+    height: 28px;
+  }
+}

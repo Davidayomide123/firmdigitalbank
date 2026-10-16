@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaBank — Withdraw</title>
+<link rel="stylesheet" href="withdraw.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">NovaBank</h2>
+    <nav>
+      <a href="dashboard.html">
+        <img src="/images/house-chimney.svg" alt="Home">
+        Home
+      </a>
+      <a href="card.html">
+        <img src="/images/credit-card.svg" alt="Card">
+        Card
+      </a>
+      <a href="#">
+        <img src="/images/services.svg" alt="Services">
+        Services
+      </a>
+      <a href="#">
+        <img src="/images/growth-chart-invest.svg" alt="Rewards">
+        Rewards
+      </a>
+      <a href="settings.html">
+        <img src="/images/user-skill-gear.svg" alt="Settings">
+        Settings
+      </a>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <!-- Page Head -->
+    <div class="page-head">
+      <h1>Withdraw</h1>
+      <p>Withdraw funds from your account</p>
+    </div>
+
+    <!-- Balance Summary -->
+    <div class="balance-strip">
+      <p class="strip-label">Available Balance</p>
+      <h2>$12,840.50</h2>
+    </div>
+
+    <!-- KYC Warning -->
+    <div class="kyc-warning">
+      <div class="kyc-icon">⚠</div>
+      <div class="kyc-text">
+        <p class="kyc-title">KYC Verification Required</p>
+        <p class="kyc-sub">You must verify your KYC before you can make a withdrawal.</p>
+      </div>
+    </div>
+
+    <!-- Withdraw Form -->
+    <section class="form-card">
+      <h3>Withdrawal Details</h3>
+
+      <div class="form-group">
+        <label for="from">From</label>
+        <select id="from">
+          <option>Main Account · 8069675028</option>
+          <option>Savings Account · 8023456789</option>
+          <option>USD Wallet · 0144-510-2008</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bank">Recipient Bank</label>
+        <input type="text" id="bank" placeholder="Enter bank name">
+      </div>
+
+      <div class="form-group">
+        <label for="account">Account Number</label>
+        <input type="text" id="account" placeholder="Enter account number">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Account Name</label>
+        <input type="text" id="name" placeholder="Enter account name">
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <div class="amount-input">
+          <span>$</span>
+          <input type="text" id="amount" placeholder="0.00">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="note">Narration (optional)</label>
+        <input type="text" id="note" placeholder="What's this for?">
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-primary" id="continueBtn">Continue Withdrawal</button>
+      </div>
+
+      <!-- KYC message shown after clicking Continue -->
+      <p class="kyc-message" id="kycMessage">
+        ⚠ Please verify your KYC before you can withdraw.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Bottom nav (phone only) -->
+  <nav class="bottom-nav">
+    <a href="dashboard.html">
+      <img src="/images/house-chimney.svg" alt="Home">
+      <span>Home</span>
+    </a>
+    <a href="card.html">
+      <img src="/images/credit-card.svg" alt="Cards">
+      <span>Cards</span>
+    </a>
+    <a href="settings.html">
+      <img src="/images/user-skill-gear.svg" alt="Profile">
+      <span>Profile</span>
+    </a>
+  </nav>
+
+</div>
+
+<script>
+  document.getElementById("continueBtn").addEventListener("click", function () {
+    document.getElementById("kycMessage").classList.add("show");
+  });
+</script>
+
+</body>
+</html>

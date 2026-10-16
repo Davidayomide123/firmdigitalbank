@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  padding: 26px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: 800;
+  padding-left: 10px;
+  margin-bottom: 34px;
+  letter-spacing: -0.3px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.sidebar nav a img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(500%) hue-rotate(180deg);
+}
+
+.sidebar nav a:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.sidebar nav a.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.sidebar nav a.active img {
+  filter: brightness(0) invert(1);
+}
+
+/* ================= MAIN ================= */
+.main {
+  margin-left: 240px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ================= KYC PAGE ================= */
+.kyc-page {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 50px 45px;
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+.kyc-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 22px;
+  font-size: 36px;
+  color: #2563eb;
+}
+
+.kyc-page h1 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.kyc-page > p {
+  font-size: 14.5px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Buttons */
+.kyc-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.kyc-actions a {
+  flex: 1;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.15s;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Info box */
+.kyc-info {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: left;
+}
+
+.info-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.info-text {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Bottom nav hidden on laptop */
+.bottom-nav {
+  display: none;
+}
+
+/* ============================================
+   TABLETS (768px and below)
+   ============================================ */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 22px 12px;
+  }
+
+  .sidebar .logo {
+    font-size: 18px;
+    margin-bottom: 26px;
+  }
+
+  .sidebar nav a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .main {
+    margin-left: 200px;
+    padding: 30px 20px;
+  }
+
+  .kyc-page {
+    padding: 40px 35px;
+  }
+
+  .kyc-page h1 {
+    font-size: 22px;
+  }
+}
+
+/* ============================================
+   PHONES (600px and below)
+   ============================================ */
+@media (max-width: 600px) {
+  body {
+    background: #ffffff;
+  }
+
+  .sidebar { display: none; }
+
+  .main {
+    margin-left: 0;
+    padding: 24px 18px 120px;
+    max-width: 100%;
+    background: #ffffff;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kyc-page {
+    border: none;
+    padding: 20px 10px;
+  }
+
+  .kyc-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .kyc-page h1 {
+    font-size: 20px;
+  }
+
+  .kyc-page > p {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .kyc-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .kyc-actions a {
+    padding: 13px;
+    font-size: 13.5px;
+  }
+
+  .info-title { font-size: 13px; }
+  .info-text  { font-size: 12.5px; }
+
+  /* Bottom nav */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 420px;
+    height: 64px;
+    background: #111827;
+    border-radius: 32px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    padding: 6px 8px;
+    z-index: 100;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 10.5px;
+    font-weight: 500;
+    flex: 1;
+    padding: 6px 0;
+    border-radius: 22px;
+  }
+
+  .bottom-nav a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(60%);
+  }
+
+  .bottom-nav a.active {
+    background: #2563eb;
+    color: #fff;
+  }
+
+  .bottom-nav a.active img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* ============================================
+   SMALL PHONES (400px and below)
+   ============================================ */
+@media (max-width: 400px) {
+  .main { padding: 20px 14px 120px; }
+
+  .kyc-page h1 { font-size: 18px; }
+  .kyc-page > p  { font-size: 13px; }
+
+  .kyc-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+  }
+
+  .bottom-nav { height: 60px; }
+  .bottom-nav a { font-size: 10px; }
+  .bottom-nav a img { width: 18px; height: 18px; }
+}
